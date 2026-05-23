@@ -1,0 +1,135 @@
+/* Thème clair par défaut */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+    --nav-bg: #343a40;
+    --nav-text: #ffffff;
+}
+
+/* Thème sombre */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f6eeee;
+    --card-bg: #1e1e1e;
+    --nav-bg: #000000;
+    --nav-text: #f4f0f0;
+}
+
+/* Application des variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    background: url('include/bg_stock.jpg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff; 
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode td,
+body.dark-mode th {
+  color: #ffffff; 
+}
+
+.card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.navbar, .sidebar {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+/* Toggle switch */
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  background-color: white;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+:root {
+  --primary-color: #0d6efd; /* bleu clair */
+}
+.dark-mode {
+  --primary-color: #1e90ff; /* bleu plus vif pour contraste */
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: darken(var(--primary-color), 10%);
+  border-color: darken(var(--primary-color), 10%);
+}
+/* Tableaux en mode sombre */
+.table-dark {
+  background-color: #1e1e1e;   /* fond sombre uniforme */
+  color: #f1f1f1;              /* texte clair */
+  border-color: #444;          /* bordures plus visibles */
+}
+
+.table-dark th {
+  background-color: #333;      /* en-tête plus contrasté */
+  color: #ffffff;              /* texte blanc */
+  font-weight: bold;
+}
+
+.table-dark td {
+  color: #e0e0e0;              /* texte gris clair */
+}
+
+/* Zébrage pour lisibilité */
+.table-dark tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+.table-dark tr:nth-child(odd) {
+  background-color: #1e1e1e;
+}
+
